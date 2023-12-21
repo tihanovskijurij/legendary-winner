@@ -1,0 +1,10 @@
+    case addShape(ShapeData)
+    case changeShape(ShapeModification, id: String)
+    case removeShape(String)
+    case addText(TextSettings)
+    case changeText(TextModification, id: String)
+enum EditMode: String {
+    case preview, edit
+    
+    mutating func next() {
+        switch self {
